@@ -139,6 +139,121 @@ start---------------------------------------------------------------------------
 
 □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ 
 ====================================================================================================*/
+.header {
+  overflow: hidden;
+  background: url(../images/header-bg.jpg) no-repeat 0 0;
+  background-size: cover;
+}
+.header .container {
+  max-width: 1920px;
+  margin: 0 auto 0;
+}
+.header .container nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 2% 0 2%;
+}
+.header .container nav .logo {
+  line-height: 0;
+  width: 200px;
+}
+.header .container nav ul {
+  display: flex;
+  align-items: center;
+}
+.header .container nav ul li {
+  margin: 0 30px 0 0;
+}
+.header .container nav ul li a {
+  color: #000000;
+  font-family: "Cinzel";
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 22px;
+  padding: 0 0 0 0;
+}
+.header .container nav ul li:last-child {
+  margin: 0 0 0 0;
+}
+.header .container nav h1 {
+  display: none;
+}
+.header .container .first-view {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  margin: 20px 0 0 0;
+  padding: 0 0 0 3%;
+}
+.header .container .first-view .text-area {
+  color: #343434;
+  width: calc(100% - 50vw);
+  padding: 50px 0 0 0;
+}
+.header .container .first-view .text-area h2 .catch {
+  font-family: "Cinzel";
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 5px;
+  font-size: 85px;
+}
+.header .container .first-view .text-area h1 .catch {
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 32px;
+}
+.header .container .first-view .text-area ul {
+  margin: 30px 0 0 0;
+}
+.header .container .first-view .text-area ul li {
+  background: url(../images/verify.svg) no-repeat 0 center;
+  background-size: 20px auto;
+  font-size: 20px;
+  padding: 5px 20px 5px 30px;
+}
+.header .container .first-view .text-area .sentence {
+  margin: 10px 0 0 0;
+}
+.header .container .first-view .text-area .sentence p {
+  line-height: 2;
+  font-size: 18px;
+  padding: 10px 0 10px 0;
+}
+.header .container .first-view .splide {
+  width: 50vw;
+}
+.header .container .first-view .splide .splide__track {
+  width: 100%;
+}
+.header .container .first-view .splide .splide__track .splide__list {
+  width: 100%;
+}
+.header .container .first-view .splide .splide__track .splide__list .splide__slide {
+  width: 100%;
+}
+.header .container .first-view .splide .splide__track .splide__list .splide__slide .thumbnail {
+  overflow: hidden;
+  position: relative;
+  right: -5vw;
+  top: 0;
+  border-radius: 50%;
+  width: 50vw;
+  height: 50vw;
+}
+.header .container .first-view .splide .splide__track .splide__list .splide__slide .thumbnail img {
+  border-radius: 50%;
+  transition: 8s ease-out;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.header .container .first-view .splide .splide__track .splide__list .splide__slide.is-active .thumbnail img {
+  transform: scale(1.15);
+  transition-delay: 0s;
+}
+
 /**********************************************************************************
 □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □  
 
@@ -175,31 +290,31 @@ start---------------------------------------------------------------------------
     margin: 20px 0 0 0;
     padding: 0 0 0 3%;
   }
-  .header .container .first-view .text {
+  .header .container .first-view .text-area {
     width: calc(100% - 50vw);
     padding: 50px 0 0 0;
   }
-  .header .container .first-view .text h2 .catch {
+  .header .container .first-view .text-area h2 .catch {
     line-height: 1.25;
     letter-spacing: 5px;
     font-size: 80px;
   }
-  .header .container .first-view .text h1 .catch {
+  .header .container .first-view .text-area h1 .catch {
     letter-spacing: 2px;
     font-size: 28px;
   }
-  .header .container .first-view .text ul {
+  .header .container .first-view .text-area ul {
     margin: 30px 0 0 0;
   }
-  .header .container .first-view .text ul li {
+  .header .container .first-view .text-area ul li {
     background-size: 19px auto;
     font-size: 19px;
     padding: 5px 20px 5px 30px;
   }
-  .header .container .first-view .text .sentence {
+  .header .container .first-view .text-area .sentence {
     margin: 10px 0 0 0;
   }
-  .header .container .first-view .text .sentence p {
+  .header .container .first-view .text-area .sentence p {
     line-height: 2;
     font-size: 17px;
     padding: 10px 0 10px 0;
@@ -259,32 +374,32 @@ start---------------------------------------------------------------------------
     margin: 20px 0 0 0;
     padding: 0 0 0 3%;
   }
-  .header .container .first-view .text {
+  .header .container .first-view .text-area {
     width: calc(100% - 50vw);
     padding: 50px 0 0 0;
   }
-  .header .container .first-view .text h2 .catch {
+  .header .container .first-view .text-area h2 .catch {
     line-height: 1.25;
     letter-spacing: 5px;
     font-size: 60px;
   }
-  .header .container .first-view .text h1 .catch {
+  .header .container .first-view .text-area h1 .catch {
     letter-spacing: 2px;
     font-size: 26px;
   }
-  .header .container .first-view .text ul {
+  .header .container .first-view .text-area ul {
     width: 120%;
     margin: 30px 0 0 0;
   }
-  .header .container .first-view .text ul li {
+  .header .container .first-view .text-area ul li {
     background-size: 18px auto;
     font-size: 18px;
     padding: 5px 20px 5px 28px;
   }
-  .header .container .first-view .text .sentence {
+  .header .container .first-view .text-area .sentence {
     margin: 10px 0 0 0;
   }
-  .header .container .first-view .text .sentence p {
+  .header .container .first-view .text-area .sentence p {
     line-height: 2;
     font-size: 16px;
     padding: 10px 0 10px 0;
@@ -347,33 +462,33 @@ start---------------------------------------------------------------------------
     margin: 20px 0 0 0;
     padding: 0 0 0 0;
   }
-  .header .container .first-view .text {
+  .header .container .first-view .text-area {
     width: calc(100% - 0vw);
     padding: 20px 4% 0 4%;
   }
-  .header .container .first-view .text h2 .catch {
+  .header .container .first-view .text-area h2 .catch {
     line-height: 1.25;
     letter-spacing: 5px;
     font-size: 12vw;
   }
-  .header .container .first-view .text h1 .catch {
+  .header .container .first-view .text-area h1 .catch {
     letter-spacing: 2px;
     font-size: 6.5vw;
   }
-  .header .container .first-view .text ul {
+  .header .container .first-view .text-area ul {
     width: 120%;
     margin: 30px 0 0 0;
   }
-  .header .container .first-view .text ul li {
+  .header .container .first-view .text-area ul li {
     background-size: 4vw auto;
     letter-spacing: 0;
     font-size: 4.35vw;
     padding: 5px 20px 5px 4.5vw;
   }
-  .header .container .first-view .text .sentence {
+  .header .container .first-view .text-area .sentence {
     margin: 10px 0 0 0;
   }
-  .header .container .first-view .text .sentence p {
+  .header .container .first-view .text-area .sentence p {
     line-height: 2;
     font-size: 4vw;
     padding: 10px 0 10px 0;

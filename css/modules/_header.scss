@@ -7,7 +7,128 @@
 □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ 
 ====================================================================================================*/
 
-
+.header {
+    overflow: hidden;
+    background: url(../images/header-bg.jpg) no-repeat 0 0;
+    background-size: cover;
+    .container {
+        max-width: 1920px;
+        margin: 0 auto 0;
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px 2% 0 2%;
+            .logo {
+                line-height: 0;
+                width: 200px;
+            }
+            ul {
+                display: flex;
+                align-items: center;
+                li {
+                    margin: 0 30px 0 0;
+                    a {
+                        color: $black-color;
+                        font-family: "Cinzel";
+                        font-weight: 500;
+                        letter-spacing: 2px;
+                        font-size: 22px;
+                        padding: 0 0 0 0;
+                    }
+                    &:last-child {
+                        margin: 0 0 0 0;
+                    }
+                }
+            }
+            h1 {
+                display: none;
+            }
+        }
+        .first-view {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row-reverse; // 逆にする
+            margin: 20px 0 0 0;
+            padding: 0 0 0 3%;
+            .text-area {
+                color: $black34-color;
+                width: calc(100% - 50vw); // ウィンドウの50%のサイズを引く
+                padding: 50px 0 0 0;
+                h2 {
+                    .catch {
+                        font-family: "Cinzel";
+                        font-weight: 500;
+                        line-height: 1.25;
+                        letter-spacing: 5px;
+                        font-size: 85px;
+                    }
+                }
+                h1 {
+                    .catch {
+                        font-weight: 600;
+                        letter-spacing: 2px;
+                        font-size: 32px;
+                    }
+                }
+                ul {
+                    margin: 30px 0 0 0;
+                    li {
+                        background: url(../images/verify.svg) no-repeat 0 center;
+                        background-size: 20px auto;
+                        font-size: 20px;
+                        padding: 5px 20px 5px 30px;
+                    }
+                }
+                .sentence {
+                    margin: 10px 0 0 0;
+                    p {
+                        line-height: 2.0;
+                        font-size: 18px;
+                        padding: 10px 0 10px 0;
+                    }
+                }
+            }
+            .splide {
+                width: 50vw; // Windows幅に対して50%
+                .splide__track {
+                    width: 100%;
+                    .splide__list {
+                        width: 100%;
+                        .splide__slide {
+                            width: 100%;
+                            .thumbnail {
+                                overflow: hidden;
+                                position: relative;
+                                right: -5vw; // Windows幅5%右に行くので外側に出るイメージ
+                                top: 0;
+                                border-radius: 50%; // 円にする
+                                width: 50vw;
+                                height: 50vw;
+                                img {
+                                    border-radius: 50%;
+                                    transition: 8s ease-out;
+                                    object-fit: cover;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            // 自分の番になると下記のクラスがつくのでその際の画像に対して寄っていくスタイルを当てる
+                            &.is-active {
+                                .thumbnail {
+                                    img {
+                                        transform: scale(1.15);
+                                        transition-delay: 0s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 /**********************************************************************************
 □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □ □  
@@ -47,7 +168,7 @@ start---------------------------------------------------------------------------
             .first-view {
                 margin: 20px 0 0 0;
                 padding: 0 0 0 3%;
-                .text {
+                .text-area {
                     width: calc(100% - 50vw);
                     padding: 50px 0 0 0;
                     h2 {
@@ -155,7 +276,7 @@ start---------------------------------------------------------------------------
             .first-view {
                 margin: 20px 0 0 0;
                 padding: 0 0 0 3%;
-                .text {
+                .text-area {
                     width: calc(100% - 50vw);
                     padding: 50px 0 0 0;
                     h2 {
@@ -269,7 +390,7 @@ start---------------------------------------------------------------------------
                 display: block;
                 margin: 20px 0 0 0;
                 padding: 0 0 0 0;
-                .text {
+                .text-area {
                     width: calc(100% - 0vw);
                     padding: 20px 4% 0 4%;
                     h2 {

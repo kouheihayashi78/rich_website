@@ -4,10 +4,13 @@
 
 @font-face {
 	font-family: 'Shippori Mincho';
+	// このように書く理由はwoff2の方が軽いので優先的に使い、ブラウザが読み込めないのであればwoffの方を使う
+	// また下のパスはscssからcssとして読み込まれたときのcssからのパスを指定する
 	src:url('../webfonts/Subset-ShipporiMincho-Medium.woff2') format('woff2'), 
 		url('../webfonts/Subset-ShipporiMincho-Medium.woff') format('woff');
 	font-weight: 500;
 	font-style: normal;
+	// swapの指定をしないとwebfontが読み込み終わるまで非表示なので、別のフォントを読み込む
 	font-display: swap;
 }
 

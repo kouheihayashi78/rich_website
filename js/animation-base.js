@@ -2,6 +2,24 @@
 // GSAPとSplitTextのプラグインを登録
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
+// start -----------------------------------------------------------------------------------//
+//
+//			#共通関数(文字を返す)
+// 
+function splitTextAnimate(selector, staggerDelay) {
+    const split = new SplitText( selector, {type: 'words, chars, lines'}); // 操作したいテキスト、種類
+    const chars = split.chars;
+    gsap.set( chars, {autoAlpha: 0, scale: 0, y: 30, rotationX: 10});
+    return gsap.to( chars, {
+        autoAlpha: 1,
+        scale: 1,
+        y: 0,
+        rotationX: 0,
+        stagger: staggerDelay,
+        TransformOrigin: "0%, 50%",
+        ease: "power2.out"
+    })
+}
 
 // start -----------------------------------------------------------------------------------//
 //
